@@ -1,0 +1,1 @@
+gcc main.c src/structs.c -o a
