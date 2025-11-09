@@ -1,35 +1,53 @@
 #include <stdio.h>
-#include "style/theme.h"
-#include "src/structs.h"
+#include <string.h>
+#include <stdlib.h>
+#include "src/theme/theme.h"
+#include "src/structs/structs.h"
+#include "src/validateInput.h"
 
 int main(){ 
 
-    struct User user;
+    char *input;
 
-    user.id = 1;
-    user.login = "gabriel";
-    user.password = "12345";
+    system("clear");
 
-    struct API_Key api_key;
+    printf(INPUT " >> ");
+    scanf("%s", input);
 
-    api_key.id = 2;
-    api_key.user_id = 1;
-    api_key.key = "abc123";
-    api_key.name = "Minha Chave de API";
-    api_key.service = "Gemini";
-    api_key.until = "07/11/2026";
+    int option = validateInput(input); 
 
-    printf("User ID: %d\n", getUserID(user));
-    printf("User Login: %s\n", user.login);
-    printf("User Password: %s\n\n", user.password);
+    switch(option){
+    case 1:
+        // ADD
+        printf("Adicionar Chave! \n");
+        break;
+
+    case 2:
+        // DEL
+        printf("Deletar Chave! \n");
+        break;
+
+    case 3:
+        // EDIT
+        printf("Editar Chave! \n");
+        break;
+        
+    case 4:
+        // LIST
+        printf("Listar Chaves! \n");
+        break;
     
-    printf("API_Key ID: %d \n", getApiKeyID(api_key));
-    printf("API_Key UserID: %d\n", api_key.user_id);
-    printf("API_Key Service: %s\n", api_key.service);
-    printf("API_Key Key: %s\n", api_key.key);
-    printf("API_Key Name: %s\n", api_key.name);
-    printf("API_Key Until: %s\n\n", api_key.until);
+    case 5:
+        // HELP
+        printf("Ajuda! \n");
+        break;
+    
+    default:
+        break;
+    }
+    
 
+    printf(RESET "\n");
 
 
     return 0;
