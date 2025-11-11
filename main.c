@@ -12,7 +12,10 @@ int main(){
     system("clear");
 
     printf(INPUT " >> ");
-    scanf("%s", input);
+    // scanf("%s", input);
+    gets(input);
+
+    printf("%s", input);
 
     int option = validateInput(input); 
 
@@ -43,6 +46,8 @@ int main(){
         break;
     
     default:
+        // DEFAULT
+        printf("Comando Invalido! \n"); 
         break;
     }
     
