@@ -2,12 +2,6 @@
 #include <string.h>
 #include "input.h"
 
-void readInput(char *input){
-
-    
-
-}
-
 int validateInput(char *input){
     if(strcmp(input, "add") == 0) return 1;
 

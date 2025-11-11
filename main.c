@@ -12,11 +12,9 @@ int main(){
     system("clear");
 
     printf(INPUT " >> ");
-    // scanf("%s", input);
-    readInput(input);
-    
+    gets(input);
 
-    return 0;
+    printf("%s", input);
 
     int option = validateInput(input); 
 
