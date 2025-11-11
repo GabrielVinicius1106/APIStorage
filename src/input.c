@@ -1,6 +1,12 @@
-#include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
-#include "validateInput.h"
+#include "input.h"
+
+void readInput(char *input){
+
+    
+
+}
 
 int validateInput(char *input){
     if(strcmp(input, "add") == 0) return 1;

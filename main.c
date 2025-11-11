@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include "src/theme/theme.h"
 #include "src/structs/structs.h"
-#include "src/validateInput.h"
+#include "src/input.h"
 
 int main(){ 
 
@@ -13,9 +13,10 @@ int main(){
 
     printf(INPUT " >> ");
     // scanf("%s", input);
-    gets(input);
+    readInput(input);
+    
 
-    printf("%s", input);
+    return 0;
 
     int option = validateInput(input); 
 
