@@ -1,1 +1,3 @@
-gcc main.c src/structs.c -o a
+gcc main.c src/structs/structs.c src/validateInput.c -o a
+
+./a
