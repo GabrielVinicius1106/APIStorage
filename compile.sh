@@ -1,3 +1,1 @@
-gcc main.c src/structs/structs.c src/input.c -o a
-
-./a
+gcc -c main.c src/structs/structs.c src/input.c

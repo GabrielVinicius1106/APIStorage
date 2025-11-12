@@ -1,0 +1,1 @@
+gcc main.c src/structs/structs.c src/validateInput.c -o a
