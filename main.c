@@ -8,10 +8,10 @@
 #define MAX_SIZE 128
 
 // Retorna: Vetor de Strings, Quantidade de Strings
-void promptVectorization(char *input, char ***tokens, char *token, int *n){
+void promptVectorization(char *input, char ***tokens, int *n){
     
     (*tokens) = malloc(sizeof(char*));
-    token = strtok(input, " ");
+    char *token = strtok(input, " ");
 
     int i = 0;
     
@@ -48,14 +48,11 @@ int main(){
     printf(INPUT " >> ");
     fgets(input, MAX_SIZE, stdin); 
     
-    // *token : String
-    // **tokens : Vetor de Strings
-    char *token;
     char **tokens;
 
     int numTokens = 1;
 
-    promptVectorization(input, &tokens, token, &numTokens);
+    promptVectorization(input, &tokens, &numTokens);
 
     for(int i = 0; i < numTokens; i++){
         printf("\n String: %s", tokens[i]);
