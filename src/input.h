@@ -1,6 +1,6 @@
 #ifndef INPUT_h
 #define INPUT_H
 
-int validateInput(char *input);
+int getRoute(char *input);
 
 #endif
