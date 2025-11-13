@@ -1,3 +1,3 @@
-gcc main.c src/structs/structs.c src/input.c
+gcc main.c src/date/date.c src/input.c
 
 ./a.out
