@@ -2,24 +2,9 @@
 #define STRUCTS_H
 
 struct API_Key{
-    int id;
-    int user_id;
-    char *service;
-    char *name;
-    char *key;
-    char *until;
+    char service[32];
+    char key[32];
+    char name[16];
 };
-
-struct User{
-    int id;
-    char *login;
-    char *password;
-};
-
-int getApiKeyID(struct API_Key api_key);
-
-int getUserID(struct User user);
-
-
 
 #endif
